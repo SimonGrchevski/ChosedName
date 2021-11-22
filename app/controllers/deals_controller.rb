@@ -1,7 +1,12 @@
 class DealsController < ApplicationController
 
   def index
-    @deals = Deal.where("user_id = ? AND product_id = ?", current_user, params[:product_id])
+    # @deals = Deal.where("user_id = ?", current_user)
+    @product = Product.find(params[:product_id])
+  end
+
+  def new
+    @deal = Deal.new()
   end
 
   def create
