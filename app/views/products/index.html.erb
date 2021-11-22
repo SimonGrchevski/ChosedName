@@ -1,7 +1,10 @@
 <h1>Index</h1>
 <%@products.each do |product| %>
-  <%= product.name %>
-  <%= product.deals.count  %> 
+<%= link_to  product_deals_path(product) do%>
+    <%= product.name %>
+    <%= product.deals.count  %> 
+  <% end %>
+  
 <% end %>
 
 <br>
