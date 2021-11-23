@@ -1,9 +1,9 @@
 <h1>DEALS INDEX</h1>
 
 <% @product.deals.each do |deal| %>
-  <%=deal.id %>
-  <%=@product.name %>
-  <%= @product.amount * deal.quantity %>
+  
+  <div>Deal name: <%=@product.name %></div>
+  <div>Sum: <%= @product.amount * deal.quantity %></div>
 <% end %>
 
 <br>

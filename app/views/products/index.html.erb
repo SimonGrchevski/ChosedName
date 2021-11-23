@@ -1,8 +1,9 @@
 <h1>Index</h1>
 <%@products.each do |product| %>
 <%= link_to  product_deals_path(product) do%>
-    <%= product.name %>
-    <%= product.deals.count  %> 
+    <div>Name: <%= product.name %></div>
+    <div>Count: <%= product.deals.count  %></div>
+    <div><img class='rounded-circle' src="<%= default_image product.image%>", alt="prfile-pic", height=100, width=100> </div>
   <% end %>
   
 <% end %>

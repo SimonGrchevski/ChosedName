@@ -17,6 +17,14 @@
       <%if notice %>
         <p class="alert"><%= alert %></p>
       <% end %>
+
+      <header>
+      <% if user_signed_in? %>
+        <li> <%= link_to 'Signout', destroy_user_session_path, method: :delete%>
+      <% end %>
+    </header>
+
     <%= yield %>
+    
   </body>
 </html>

@@ -1,5 +1,6 @@
 <%= form_with model:@product do |f| %>
   <%= f.text_field :name, placeholder:'name'%>
   <%= f.number_field :amount, placeholder:'amount' %>
+  <%= f.file_field :image, placeholder:'Upload image'%> 
   <%= f.submit %>
 <% end %>
