@@ -1,0 +1,8 @@
+<h1>NEW DEALS </h1>
+<%= form_with model:@deal, url:product_deals_url do |f| %>
+  <%= f.text_field :name, placeholder:'name'%>
+  <%= f.number_field :quantity, placeholder:'quantity' %>
+  <%# <%= select("category", "category", Product.all.collect {|p| [ p.name ] } )  %>  
+  <%= f.select :category,{"Categories" => Product.all.collect {|p| [ p.name ] }} %>
+  <%= f.submit %>
+<% end %>
