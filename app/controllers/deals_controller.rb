@@ -1,7 +1,7 @@
 class DealsController < ApplicationController
 
   def index
-    # @deals = Deal.where("user_id = ?", current_user)
+    @deals = Product.find(params[:product_id]).deals.order(created_at: :desc)
     @product = Product.find(params[:product_id])
   end
 
@@ -14,7 +14,7 @@ class DealsController < ApplicationController
 
     if @deal.save
       flash[:notice] = 'Created new deal'
-      redirect_to :root
+      redirect_to product_deals_path
     else
       flash[:alert] = 'Cannot create new deal'
       redirect_to request.referrer
