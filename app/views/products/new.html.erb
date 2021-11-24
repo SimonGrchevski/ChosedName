@@ -1,6 +1,22 @@
-<%= form_with model:@product do |f| %>
-  <%= f.text_field :name, placeholder:'name'%>
-  <%= f.number_field :amount, placeholder:'amount' %>
-  <%= f.file_field :image, placeholder:'Upload image'%> 
-  <%= f.submit %>
+<%= render 'layouts/page_title', :page_title =>'New Product'%>
+<div class="vh-50 pageBody">
+  <%= form_with model:@product, class:"d-flex flex-column mx-auto p-3 w-75" do |f| %>
+    <%= f.label :name, value:"Name" %>
+    <%= f.text_field :name, placeholder:'name', class:'mb-3'%>
+
+    <%= f.label :amount, value:"Amount" %>
+    <%= f.number_field :amount, placeholder:'amount', class:'mb-3' %>
+    <%= f.label :image, value:"Upload Image" %>
+    <div class="category carrier-wave-field overflow-hidden">
+      <%= f.file_field :image, placeholder:'Upload image'%> 
+    </div>
+</div>
+  <div class="d-flex justify-content-center bg-success p-3 btnWrapper">
+    <%= f.submit 'Create Transaction', class:'btn btn-success w-100 border-white'%>
+  </div>
+  
 <% end %>
+
+
+
+

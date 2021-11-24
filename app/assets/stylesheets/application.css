@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+ a,
+ li {
+   text-decoration: none !important;
+   list-style-type: none;
+ }
+
+ .productImage {
+   width: 100%;
+ }
+
+ .pageHeader {
+   height: 4rem;
+ }
+
+ .btnWrapper {
+   height: 4rem;
+ }
+
+ .pageBody {
+   min-height: calc( 100vh - 8rem);
+ }
+
+ .category select {
+   padding: 0.3rem;
+   width: 100%;
+ }

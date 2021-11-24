@@ -1,8 +1,9 @@
 class DealsController < ApplicationController
 
   def index
-    @deals = Product.find(params[:product_id]).deals.order(created_at: :desc)
     @product = Product.find(params[:product_id])
+    @deals = @product.deals.order(created_at: :desc)
+    @total_amount = @deals.map{|d| @product.amount * d.quantity}.inject{ |sum, n| sum + n }
   end
 
   def new

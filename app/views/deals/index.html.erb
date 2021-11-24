@@ -1,9 +1,25 @@
-<h1>DEALS INDEX</h1>
-
+<%= render 'layouts/page_title', :page_title =>'Transactions' %>
+<div class="d-flex justify-content-end px-2 border-bottom py-3"> $<%= @total_amount %>.00 </div>
 <% @deals.each do |deal| %>
-  <div>Deal name: <%=@product.name %></div>
-  <div>Sum: <%= @product.amount * deal.quantity %></div>
+<article class="d-flex justify-content-between m-2 text-center bg-white align-items-center">
+  <div class="w-25">
+    <img class='rounded-circle productImage' src="<%= default_image @product.image%>", alt="prfile-pic"> 
+  </div>
+  <div class="w-50 text-break  d-flex flex-column">
+    <div class="h-25"></div>
+      <div class='text-muted pb-1 pt-4'>
+        <%=@product.name%>
+      </div> 
+      <div class='text-muted'>  
+        <%= @product.created_at.to_s[0..9] %>
+      </div>
+  </div>
+  <div class="w-25 d-flex align-items-center justify-content-end text-dark">
+    $<%= @product.amount * deal.quantity %>.00
+  </div>
+</article>
 <% end %>
 
-<br>
-<%= link_to 'Add new Deal', new_product_deal_path %>
+<div class="d-flex justify-content-center bg-success p-3 btnWrapper">
+  <%= link_to 'Add new Transaction', new_product_deal_path, class:'btn btn-success w-100 border-white'%>
+</div>
