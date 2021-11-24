@@ -1,4 +1,4 @@
-<%= render 'layouts/page_title', :page_title =>' new Transaction' %>
+<%= render 'layouts/page_title', :page_title =>' new Transaction', :back_to => product_deals_path %>
 <div class="vh-50 pageBody">
   <%= form_with model:@deal, class:"d-flex flex-column mx-auto p-3 w-75", url:product_deals_url do |f| %>
     <%= f.label :name, value:"Name" %>

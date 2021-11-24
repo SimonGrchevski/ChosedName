@@ -1,6 +1,6 @@
-<%= render 'layouts/page_title', :page_title =>'New Product'%>
-<div class="vh-50 pageBody">
-  <%= form_with model:@product, class:"d-flex flex-column mx-auto p-3 w-75" do |f| %>
+<%= render 'layouts/page_title', :page_title =>'New Product', :back_to => products_path%>
+<div class="pageBody align-items-center d-flex">
+  <%= form_with model:@product, class:"d-flex flex-column mx-auto p-5 w-75 whiteWrapper" do |f| %>
     <%= f.label :name, value:"Name" %>
     <%= f.text_field :name, placeholder:'name', class:'mb-3'%>
 

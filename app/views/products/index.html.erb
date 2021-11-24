@@ -1,23 +1,24 @@
-<%= render 'layouts/page_title', :page_title =>'Products' %>
-<%@products.each do |product| %>
-<%= link_to  product_deals_path(product) do%>
-  <article class="d-flex justify-content-between m-2 text-center bg-white align-items-center">
-  <div class="w-25">
-    <img class='rounded-circle productImage' src="<%= default_image product.image%>", alt="prfile-pic"> 
-  </div>
-  <div class='text-muted '>
-      <%=product.name%>
-  </div> 
-  <div class='text-muted'>  
-    <%= product.deals.count %>
-  </div>
-</article>
+<%= render 'layouts/page_title', :page_title =>'Products', :back_to => nil %>
+<section class="pageBody p-1">
+  <%@products.each do |product| %>
+  <%= link_to  product_deals_path(product) do%>
+    <article class="d-flex justify-content-between m-2 text-center bg-white align-items-center whiteWrapper p-3 vh-20">
+    <div class="w-25 h-inherit">
+      <img class='rounded-circle productImage' src="<%= default_image product.image%>", alt="prfile-pic"> 
+    </div>
+    <div class='text-muted '>
+        <%=product.name%>
+    </div> 
+    <div class='text-muted'>  
+      <%= product.deals.count %>
+    </div>
+  </article>
+    <% end %>
+    
   <% end %>
-  
-<% end %>
-
+</section>
 <div class="d-flex justify-content-center bg-success p-3 btnWrapper">
-  <%= link_to 'Add new product', new_product_path, class:'btn btn-success w-100 border-white'%>
-</div>
+    <%= link_to 'Add new product', new_product_path, class:'btn btn-success w-100 border-white'%>
+  </div>
 
 
