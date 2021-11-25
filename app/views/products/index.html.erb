@@ -4,7 +4,7 @@
 
   <% @products.each do |product| %>
     <%= link_to  product_deals_path(product) do%>
-      <article class="d-flex justify-content-between m-2 text-center bg-white align-items-center whiteWrapper p-3 vh-20">
+      <article class="d-flex justify-content-between m-2 text-center align-items-center whiteWrapper p-3 vh-20">
         <div class="w-25">
           <img class='rounded-circle productImage' src="<%= default_image product.image%>", alt="prfile-pic"> 
         </div>
