@@ -14,13 +14,17 @@
   </head>
 
   <body>
+
+    <div class="alerts d-flex w-100 justify-content-center">
       <%if notice %>
         <p class="notice"><%= notice %></p>
       <% end %>
-      <%if notice %>
+      <%if alert %>
         <p class="alert"><%= alert %></p>
       <% end %>
-    <%= yield %>
+    </div>
+      <%= yield %>
+   
     <script>
       feather.replace()
     </script>

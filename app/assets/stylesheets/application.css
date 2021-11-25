@@ -30,7 +30,7 @@ li {
 }
 
 .signUpBodyHeight {
-  height: calc(100vh - 4rem);
+  height: 100vh;
 }
 
 .h-inherit {
@@ -63,7 +63,7 @@ li {
 }
 
 .pageBody {
-  min-height: calc(100vh - 10rem);
+  min-height: calc(100vh - 6rem);
   background-color: rgba(169, 169, 169, 0.267);
 }
 
