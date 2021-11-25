@@ -1,10 +1,29 @@
-<h1>DEALS INDEX</h1>
+<%= render 'layouts/page_title', :page_title =>'Transactions', :back_to => products_path %>
 
-<% @product.deals.each do |deal| %>
-  <%=deal.id %>
-  <%=@product.name %>
-  <%= @product.amount * deal.quantity %>
-<% end %>
+<section class="pageBody">
+<div class="d-flex justify-content-end px-2 border-bottom py-3 whiteWrapper"> $<%= @total_amount %>.00 </div>
 
-<br>
-<%= link_to 'Add new Deal', new_product_deal_path %>
+  <% @deals.each do |deal| %>
+  <article class="d-flex justify-content-between m-2 text-center align-items-center whiteWrapper p-3 vh-20">
+    <div class="w-25">
+      <img class='rounded-circle productImage' src="<%= default_image @product.image%>", alt="prfile-pic"> 
+    </div>
+    <div class="w-50 h-100 text-break  d-flex flex-column">
+        <div class='text-muted d-flex height-60 justify-content-center'>
+          <div class="align-self-end"><%=@product.name%></div>
+        </div> 
+        <div class='text-muted height-40 d-flex justify-content-center'>  
+          <div class="align-self-end"><%= @product.created_at.to_s[0..9] %></div>
+        </div>
+    </div>
+    <div class="w-25 d-flex align-items-center justify-content-end text-dark">
+      $<%= @product.amount * deal.quantity %>.00
+    </div>
+  </article>
+  <% end %>
+
+</section>
+
+<div class="d-flex justify-content-center bg-success p-3 btnWrapper">
+  <%= link_to 'Add new Transaction', new_product_deal_path, class:'btn btn-success w-100 border-white'%>
+</div>

@@ -1,0 +1,25 @@
+<nav class="bg-primary pageHeader">
+  <section class="d-flex justify-content-between  align-items-center text-center" style="color:white;">
+    <div class="p-2">
+      <i data-feather="align-justify" role="button"></i>
+    </div>
+    <div class="fs-3 text-uppercase p-2">
+      <%= page_title %>
+    </div>
+    <div class="p-2">
+      <i data-feather="search" role="button"></i>
+    </div>
+  </section>
+  <section class="signOut px-2 d-flex justify-content-between">
+    <% if back_to %>
+      <%= link_to  back_to  do %>
+        <p><i data-feather="chevron-left" role="button"></i></p>
+      <% end %>
+    <% else %>
+      <div></div>
+    <% end %>
+   <%= link_to destroy_user_session_path, method: :delete do %>
+    <p><i data-feather="log-out" role="button"></i></p>
+  <% end %>
+  </section>
+</nav>

@@ -1,7 +1,20 @@
-<h1>NEW DEALS </h1>
-<%= form_with model:@deal, url:product_deals_url do |f| %>
-  <%= f.text_field :name, placeholder:'name'%>
-  <%= f.number_field :quantity, placeholder:'quantity' %>
-  <%= f.select :category,{"Categories" => Product.all.collect {|p| [ p.name ] }} %>
-  <%= f.submit %>
-<% end %>
+<%= render 'layouts/page_title', :page_title =>' new Transaction', :back_to => product_deals_path %>
+<div class="vh-50 pageBody d-flex align-items-center">
+  <%= form_with model:@deal, class:"d-flex flex-column mx-auto p-5 h-50 w-75 whiteWrapper", url:product_deals_url do |f| %>
+
+    <%= f.label :name, value:"Name" %>
+    <%= f.text_field :name, placeholder:'name', class:'mb-3', :required=> true %>
+
+    <%= f.label :name, value:"Quanity" %>
+    <%= f.number_field :quantity, placeholder:'quantity', class:'mb-3', :required=> true %>
+    
+    <%= f.label :name, value:"Category" %>
+    <div class="category">
+      <%= f.select :category,{"Categories" => Product.all.collect {|p| [ p.name ] }} %>
+    </div>
+     <div class="d-flex justify-content-center bg-success p-3 btnWrapper mt-5">
+      <%= f.submit 'Create Transaction', class:'btn btn-success w-100 border-white'%>
+     </div>
+  <% end %>
+</div>
+ 
