@@ -19,10 +19,6 @@
   box-sizing: border-box;
 }
 
-.bg-white {
-  background-color: white;
-}
-
  a,
  li {
    text-decoration: none !important;
@@ -31,6 +27,10 @@
 
  .vh-20 {
   height: 20vh;
+ }
+
+ .signUpBodyHeight {
+   height: calc( 100vh - 4rem );
  }
 
  .h-inherit {
@@ -79,13 +79,4 @@
 .whiteWrapper {
   background: rgba(255, 255, 255, 0.699);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.awesmeLogo {
-  margin: 0 auto;
-  width: 100vw;
-  height: 70vh;
-  background: url(anothersmokingMonkey.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
 }

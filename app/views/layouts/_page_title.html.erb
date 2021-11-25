@@ -18,6 +18,8 @@
     <% else %>
       <div></div>
     <% end %>
-   <%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
+   <%= link_to destroy_user_session_path, method: :delete do %>
+    <p><i data-feather="log-out" role="button"></i></p>
+  <% end %>
   </section>
 </nav>
