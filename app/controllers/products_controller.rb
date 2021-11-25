@@ -1,15 +1,12 @@
 class ProductsController < ApplicationController
-
   def index
     @products = current_user.products
   end
 
-  def splash
-
-  end
+  def splash; end
 
   def new
-    @product = Product.new()
+    @product = Product.new
   end
 
   def create
@@ -21,12 +18,11 @@ class ProductsController < ApplicationController
       flash[:alert] = 'Cannot create new product'
       redirect_to request.referrer
     end
-
   end
 
   private
+
   def product_params
     params.require(:product).permit(:name, :amount, :image)
   end
-
 end

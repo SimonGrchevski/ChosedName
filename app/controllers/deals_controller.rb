@@ -1,13 +1,12 @@
 class DealsController < ApplicationController
-
   def index
     @product = Product.find(params[:product_id])
     @deals = @product.deals.order(created_at: :desc)
-    @total_amount = @deals.map{|d| @product.amount * d.quantity}.inject{ |sum, n| sum + n }
+    @total_amount = @deals.map { |d| @product.amount * d.quantity }.inject { |sum, n| sum + n }
   end
 
   def new
-    @deal = Deal.new()
+    @deal = Deal.new
   end
 
   def create
@@ -23,6 +22,7 @@ class DealsController < ApplicationController
   end
 
   private
+
   def deals_params
     params.require(:deal).permit(:name, :quantity, :category)
   end
