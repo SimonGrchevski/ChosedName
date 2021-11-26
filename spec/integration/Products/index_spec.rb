@@ -11,7 +11,7 @@ RSpec.describe 'Group view', type: :feature do
     end
 
     context 'when rendering index page' do
-      it {expect(page).to have_content('Products')}
+      it { expect(page).to have_content('Products') }
     end
 
     context 'click on Add new product' do

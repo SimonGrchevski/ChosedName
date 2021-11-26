@@ -8,5 +8,4 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6, maximum: 50 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
 end

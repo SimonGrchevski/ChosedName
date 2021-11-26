@@ -4,7 +4,7 @@ RSpec.describe 'Products new', type: :feature do
   include Devise::Test::IntegrationHelpers
 
   before :all do
-    @user =  User.create(name: 'Gand', email: 'waleter@email.com', password: 'Almighty')
+    @user = User.create(name: 'Gand', email: 'waleter@email.com', password: 'Almighty')
   end
 
   describe 'new' do

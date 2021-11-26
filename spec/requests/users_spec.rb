@@ -9,7 +9,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to have_http_status(:ok)
     end
 
-    it "renders splash successfully" do
+    it 'renders splash successfully' do
       expect(response).to render_template('splash')
     end
   end

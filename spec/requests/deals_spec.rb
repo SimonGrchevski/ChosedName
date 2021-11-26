@@ -4,8 +4,8 @@ RSpec.describe 'Deals', type: :request do
   include Devise::Test::IntegrationHelpers
 
   before :all do
-    @user =  User.create(name: 'Gand', email: 'waleter@email.com', password: 'Almighty')
-    @product = Product.create(name: 'unique', image: '', user_id: @user.id, amount:3)
+    @user = User.create(name: 'Gand', email: 'waleter@email.com', password: 'Almighty')
+    @product = Product.create(name: 'unique', image: '', user_id: @user.id, amount: 3)
   end
 
   before :each do
@@ -13,7 +13,7 @@ RSpec.describe 'Deals', type: :request do
   end
 
   describe 'GET /new' do
-    before { get new_product_deal_path([:product_id =>@product.id]) }
+    before { get new_product_deal_path([product_id: @product.id]) }
 
     it 'returns http succesex' do
       expect(response).to have_http_status(:success)

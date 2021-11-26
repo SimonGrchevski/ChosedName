@@ -4,7 +4,7 @@ RSpec.describe 'User view', type: :feature do
   include Devise::Test::IntegrationHelpers
 
   before :all do
-    @user =  User.create(name: 'Gandalf', email: 'Gandy@email.com', password: 'GandyAlmighty')
+    @user = User.create(name: 'Gandalf', email: 'Gandy@email.com', password: 'GandyAlmighty')
   end
 
   before :each do
