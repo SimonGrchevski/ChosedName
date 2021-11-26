@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
-  let(:user){ User.new(name: 'Gandalf', email: 'Gandy@email.com', password: 'GandyAlmighty')};
+  let(:user){ User.new(name: 'Gandalf', email: 'Gandy4@email.com', password: 'GandyAlmighty')};
 
     before { user.save }
 
