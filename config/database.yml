@@ -66,5 +66,5 @@ test:
 production:
   <<: *default
   database: chosenName_production
-  username: chosenName
-  password: <%= ENV['CHOSENNAME_DATABASE_PASSWORD'] %>
+  username: sime
+  password: 2904genesis
