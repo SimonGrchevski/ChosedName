@@ -67,6 +67,10 @@ li {
   background-color: rgba(169, 169, 169, 0.267);
 }
 
+.pageBodyButtonOut {
+  min-height: calc(100vh - 10rem);
+}
+
 .category select {
   padding: 0.3rem;
   width: 100%;
@@ -79,4 +83,9 @@ li {
 .whiteWrapper {
   background: rgba(255, 255, 255, 0.699);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  max-width: 550px;
+  min-width: 360px;
 }

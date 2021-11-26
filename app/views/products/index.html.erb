@@ -1,6 +1,6 @@
 <%= render 'layouts/page_title', :page_title =>'Products', :back_to => nil %>
 
-<section class="pageBody pt-3">
+<section class="pageBody pageBodyButtonOut pt-3">
 
   <% @products.each do |product| %>
     <%= link_to  product_deals_path(product.id) do%>

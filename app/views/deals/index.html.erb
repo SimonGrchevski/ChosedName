@@ -1,6 +1,6 @@
 <%= render 'layouts/page_title', :page_title =>'Transactions', :back_to => products_path %>
 
-<section class="pageBody">
+<section class="pageBody pageBodyButtonOut">
 <div class="d-flex justify-content-end px-2 border-bottom py-3 whiteWrapper"> $<%= @total_amount %>.00 </div>
 
   <% @deals.each do |deal| %>
