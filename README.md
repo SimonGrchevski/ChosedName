@@ -1,24 +1,46 @@
-# README
+#ChosenName
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+> In this project the user can register and log in, so that the data is private. The user can introduce new transaction associated with a category and see the money spend on each category.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby on Rails
 
-* Configuration
+## Test with
+- Rspec
 
-* Database creation
+### Deploy with
+- Heroku
 
-* Database initialization
+## Demo
+[live link](https://damp-brushlands-90418.herokuapp.com/)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Authors
 
-* Deployment instructions
+👤 Simon Grchevski
 
-* ...
+- GitHub: [Github](https://github.com/SimonGrchevski)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/simon-grchevski-682935209/)
+- Twitter: [Twitter](https://twitter.com/grchevski)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
