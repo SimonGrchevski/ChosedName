@@ -17,7 +17,7 @@ RSpec.describe 'User view', type: :feature do
     it { expect(page).to have_content('Products') }
 
     context 'button on click' do
-      it 'should redirect me to Login page' do
+      it 'should redirect me to New product' do
         sign_in @user
         find_link('Add new product').click
         expect(current_path).to eq(new_product_path)
