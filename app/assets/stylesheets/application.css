@@ -58,6 +58,12 @@ li {
   height: 6rem;
 }
 
+.messagePrompt {
+  position: absolute;
+  top: 0;
+  height: 1rem;
+}
+
 .btnWrapper {
   height: 4rem;
 }

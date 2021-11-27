@@ -5,7 +5,7 @@
 
 ![screenshot](./sc.png)
 
-## Built With
+## Build With
 
 - Ruby
 - Ruby on Rails
@@ -27,10 +27,10 @@
   $ rails db:migrate
 ```
 
-## Test with
+## Tested using
 - Rspec
 
-### Deploy with
+### Deploy using
 - Heroku
 
 ## Demo
