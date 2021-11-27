@@ -1,0 +1,29 @@
+<%= render 'layouts/page_title', :page_title =>'Products', :back_to => nil %>
+
+<section class="pageBody pageBodyButtonOut pt-3">
+
+  <% @products.each do |product| %>
+    <%= link_to  product_deals_path(product.id) do%>
+      <article class="d-flex justify-content-between m-2 text-center align-items-center whiteWrapper p-3 vh-20">
+        <div class="w-25">
+          <img class='rounded-circle productImage' src="<%= default_image product.image%>", alt="prfile-pic"> 
+        </div>
+        <div class="w-50 text-break d-flex">
+            <div class='text-muted w-50'>
+              <%=product.name%>
+            </div> 
+            <div class='text-muted w-50'>  
+              <%= product.amount %>
+            </div>
+        </div>
+      </article>
+    <% end %>
+  <% end %>
+</section>
+
+<div class="d-flex justify-content-center bg-success p-3 btnWrapper">
+    <%= link_to 'Add new product', new_product_path, class:'btn btn-success w-100 border-white'%>
+</div>
+
+
+

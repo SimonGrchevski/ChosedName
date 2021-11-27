@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  authenticated :user do
+    root 'products#index', as: :authenticated_root
+  end
+  unauthenticated :user do
+    root 'products#splash', as: :unauthenticated_root
+  end
+
+  resources :products do
+    resources :deals
+  end
 end
