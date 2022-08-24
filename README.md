@@ -1,4 +1,4 @@
-#ChosenName
+#ChosedName
 
 
 > In this project the user can register and log in, so that the data is private. The user can introduce new transaction associated with a category and see the money spend on each category.
